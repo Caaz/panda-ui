@@ -1,0 +1,55 @@
+html
+  head
+    link(rel='stylesheet' href='../node_modules/reset-css/reset.css')
+    link(rel='stylesheet' href='../node_modules/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet' href='./main.css')
+    script(src='../src/manager/renderer.js')
+  body
+    #flash
+    #login
+      input(type='text' placeholder='Save Directory')#directory
+      input(type='email' placeholder='Email')#email
+      input(type='password' placeholder='Password')#password
+      .actions
+        .button.button-auto.dark#sign-in
+          i.fa.fa-sign-in
+          | Sign In
+    main
+      #playlists
+        table
+          //- thead
+            tr
+              th.hidden
+              th
+              th Station Name
+              th Saves
+              th Skips
+              th Delay
+          tbody
+        //- span.grow
+        //- div#playlist-controls
+          i.fa.fa-cog.button
+          i.fa.fa-plus.button
+      #queue-container: #queue
+        //-
+          div.finished(data-song-identity="Blah")
+            .album-art
+              img(src='/home/caaz/Desktop/skull.jpg')
+            .track-info
+              span Song Name
+              span.small Artist - Album
+              span.small Some Station Radio
+          div.downloading(data-song-identity="Blah")
+            .album-art
+              //- img(src='/home/caaz/Desktop/skull.jpg')
+            .track-info
+              span Song Name Downloading
+              span.small Artist - Album
+              span.small Some Station Radio
+          div(data-song-identity="Blah")
+            .album-art
+              //- img(src='/home/caaz/Desktop/skull.jpg')
+            .track-info
+              span Song Name Waiting
+              span.small Artist - Album
+              span.small Some Station Radio
